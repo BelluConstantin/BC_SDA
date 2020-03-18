@@ -1,4 +1,4 @@
-//package ro.unitbv.javadatatype;
+//package ro.unitbv.javadatatype; v2
 
 import java.util.Scanner;
 

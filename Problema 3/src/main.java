@@ -10,7 +10,8 @@ public class main {
 		
 		c1.getCompleteName();
 		c1.getAddress().getFullAddress();
-		c1.getPaymentMethod().getType();
+		System.out.println(c1.getPaymentMethod().getType());
+		
 	}
 
 }

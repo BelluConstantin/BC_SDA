@@ -52,7 +52,7 @@ public class Main {
 							System.out.println("Border width - " + s.getBorderWidth());
 							System.out.println("Fill color- " + s.getHexFillColor());
 							System.out.println();
-							s.Draw();
+							s.draw();
 
 						}
 
@@ -86,7 +86,7 @@ public class Main {
 							System.out.println("Border width - " + s.getBorderWidth());
 							System.out.println("Fill color- " + s.getHexFillColor());
 							System.out.println();
-							s.Draw();
+							s.draw();
 
 						}
 						return;
@@ -113,7 +113,7 @@ public class Main {
 							System.out.println("Border width - " + s.getBorderWidth());
 							System.out.println("Fill color- " + s.getHexFillColor());
 							System.out.println();
-							s.Draw();
+							s.draw();
 
 						}
 
@@ -136,7 +136,7 @@ public class Main {
 		// Patrat - Culoare, Grosime, Dimensiune
 		shapes.add(new Patrat("#21241B", 5, 8));
 		// Dreptunghi - Culoare, Grosime, Latime, Inaltime
-		shapes.add(new Dreptunghi("#f5f6f5", 2, 2, 8));
+		shapes.add(new Dreptunghi("#f5f6fF", 2, 2, 8));
 		// Cerc - Culoare, Grosime, Raza
 		shapes.add(new Cerc("#f5f6f5", 2, 7));
 
@@ -154,7 +154,7 @@ public class Main {
 
 			System.out.println("Fill color- " + s.getHexFillColor());
 			System.out.println();
-			s.Draw();
+			s.draw();
 
 		}
 

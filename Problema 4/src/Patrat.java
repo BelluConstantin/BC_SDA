@@ -49,7 +49,7 @@ public class Patrat implements Shape {
 		return "0";
 	}
 
-	public void Draw() {
+	public void draw() {
 
 		String a[][] = new String[size][size];
 

@@ -52,7 +52,7 @@ public class Dreptunghi implements Shape {
 
 	}
 
-	public void Draw() {
+	public void draw() {
 
 		String a[][] = new String[width][height];
 

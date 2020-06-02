@@ -1,6 +1,7 @@
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
+import java.util.Arrays;
 
 public class Main {
 
@@ -134,11 +135,36 @@ public class Main {
 		//Parcurgere automata
 		List<Shape> shapes = new ArrayList<>();
 		// Patrat - Culoare, Grosime, Dimensiune
-		shapes.add(new Patrat("#21241B", 5, 8));
+		shapes.add(new Patrat("#f5f6fF", 5, 8));
 		// Dreptunghi - Culoare, Grosime, Latime, Inaltime
 		shapes.add(new Dreptunghi("#f5f6fF", 2, 2, 8));
 		// Cerc - Culoare, Grosime, Raza
 		shapes.add(new Cerc("#f5f6f5", 2, 7));
+		
+		
+		String stringArray[] = new String[shapes.size()];
+		int c = 0;
+		for (Shape s : shapes) {
+			stringArray[c] = s.getHexFillColor();
+			c++;
+		}
+
+		Arrays.sort(stringArray);
+
+		int numberOfAppearance;
+		System.out.println("Culori hex existente: ");
+		for (int i = 0; i < stringArray.length; i++) {
+
+			if (stringArray[i] == stringArray[i + 1]) {
+				i++;
+			}
+
+			numberOfAppearance = countOccurrences(stringArray, stringArray.length, stringArray[i]);
+
+			System.out.println(stringArray[i] + " - " + numberOfAppearance);
+
+		}
+		
 
 		for (Shape s : shapes) {
 
@@ -160,4 +186,14 @@ public class Main {
 
 	}
 
+	private static int countOccurrences(String arr[], int n, String x) {
+		int res = 0;
+		for (int i = 0; i < n; i++)
+			if (x == arr[i])
+				res++;
+		return res;
+	}
+
+
 }
+
